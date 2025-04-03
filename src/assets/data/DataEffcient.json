@@ -1,0 +1,98 @@
+{
+  "equally_weighted": {
+    "weights": {
+      "FPT": "33.33%",
+      "KSV": "33.33%",
+      "LPB": "33.33%",
+      "TOTAL": "100.00%"
+    },
+    "invested": {
+      "FPT": "333333333.3",
+      "KSV": "333333333.3",
+      "LPB": "333333333.3",
+      "TOTAL": "1000000000"
+    },
+    "number_of_shares": {
+      "FPT": "2290.95075",
+      "KSV": "2043.735949",
+      "LPB": "9496.676163"
+    },
+
+    "port_expected_return": "4.94%",
+    "port_std_dev": "11.09%",
+    "Sharpe_Ratio": "0.378"
+  },
+  "Maximum_Sharpe_Ratio": {
+    "weights": {
+      "FPT": "47.63%",
+      "KSV": "16.56%",
+      "LPB": "35.81%",
+      "TOTAL": "100.00%"
+    },
+    "invested": {
+      "FPT": "476332837.9",
+      "KSV": "165577784",
+      "LPB": "358089378.1",
+      "TOTAL": "1000000000"
+    },
+    "number_of_shares": {
+      "FPT": "3273.765209",
+      "KSV": "1015.191809",
+      "LPB": "10201.97658"
+    },
+
+    "port_expected_return": "4.41%",
+    "port_std_dev": "9.11%",
+    "Sharpe_Ratio": "0.402"
+  },
+  "Minimum_Variance_Portfolio": {
+    "weights": {
+      "FPT": "88.57%",
+      "KSV": "5.44%",
+      "LPB": "5.99%",
+      "TOTAL": "100.00%"
+    },
+    "invested": {
+      "FPT": "885673292.1",
+      "KSV": "54405423.2",
+      "LPB": "59921281.29",
+      "TOTAL": "999999997"
+    },
+    "number_of_shares": {
+      "FPT": "6087.101664",
+      "KSV": "333.5709577",
+      "LPB": "1707.159011"
+    },
+    "port_expected_return": "3.55%",
+    "port_std_dev": "7.97%",
+    "Sharpe_Ratio": "0.351"
+  },
+  "Random": {
+    "weights": {
+      "FPT": "34.40%",
+      "KSV": "19.09%",
+      "LPB": "46.51%",
+      "TOTAL": "100.00%"
+    },
+    "invested": {
+      "FPT": "343995955.5",
+      "KSV": "190931592.1",
+      "LPB": "465072452.4",
+      "TOTAL": "1000000000"
+    },
+    "number_of_shares": {
+      "FPT": "1674.825.772",
+      "KSV": "2140.03648",
+      "LPB": "11603.21653"
+    },
+    "trong": {
+      "FPT": "0.482380367",
+      "KSV": "0.690926949",
+      "LPB": "0.80619947",
+      "TOTAL": "1.97950679"
+    },
+    "port_expected_return": "5.11%",
+    "port_std_dev": "11.64%",
+    "Sharpe_Ratio": "0.375"
+  }
+}

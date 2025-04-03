@@ -1,0 +1,20 @@
+{
+  "risk_free": "0.75%",
+  "assets": {
+    "FPT": {
+      "average_return": "3.27%",
+      "std_dev": "8.12%",
+      "sharpe_ratio": 0.31
+    },
+    "KSV": {
+      "average_return": "6.66%",
+      "std_dev": "23.98%",
+      "sharpe_ratio": 0.246
+    },
+    "LPB": {
+      "average_return": "4.89%",
+      "std_dev": "12.48%",
+      "sharpe_ratio": 0.332
+    }
+  }
+}

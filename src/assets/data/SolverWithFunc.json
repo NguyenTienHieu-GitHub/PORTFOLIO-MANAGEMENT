@@ -1,0 +1,14 @@
+{
+  "headers": ["Solver with function", ""],
+  "rows": [
+    { "Solver with function": "γ", "Value": "62.94%", "highlight": false },
+    { "Solver with function": "1-γ", "Value": "37.06%", "highlight": false },
+    { "Solver with function": "", "Value": "100.00%", "highlight": false },
+    { "Solver with function": "E(rp)", "Value": "4.41%", "highlight": false },
+    { "Solver with function": "σp", "Value": "9.11%", "highlight": false },
+    { "Solver with function": "rf", "Value": "0.75%", "highlight": false },
+    { "Solver with function": "E(rc)", "Value": "3.05%", "highlight": false },
+    { "Solver with function": "σc", "Value": "5.74%", "highlight": false },
+    { "Solver with function": "U", "Value": "1.90%", "highlight": false }
+  ]
+}

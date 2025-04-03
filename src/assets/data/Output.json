@@ -1,0 +1,12 @@
+{
+  "headers": ["OUTPUT", ""],
+  "rows": [
+    { "OUTPUT": "w(FPT)", "value": "47.63%", "highlight": false },
+    { "OUTPUT": "w(KSV)", "value": "16.56%", "highlight": false },
+    { "OUTPUT": "w(LPB)", "value": "35.81%", "highlight": false },
+    { "OUTPUT": "Total", "value": "100.000%", "highlight": false },
+    { "OUTPUT": "E(rp)", "value": "4.41%", "highlight": false },
+    { "OUTPUT": "σp", "value": "9.11%", "highlight": false },
+    { "OUTPUT": "Sharpe ratio", "value": "40.16%", "highlight": true }
+  ]
+}

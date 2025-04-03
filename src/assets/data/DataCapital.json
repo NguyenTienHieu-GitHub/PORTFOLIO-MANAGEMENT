@@ -1,0 +1,19 @@
+{
+  "headers": ["Assuming", "Value"],
+  "rows": [
+    { "Assuming": "Capital", "Value": "1000000000", "highlight": false },
+    {
+      "Assuming": "The risk-free asset",
+      "Value": "370570661.11",
+      "highlight": false
+    },
+    {
+      "Assuming": "The risky portfolio",
+      "Value": "629429338.89",
+      "highlight": true
+    },
+    { "Assuming": "FPT", "Value": "299816361.68", "highlight": true },
+    { "Assuming": "KSV", "Value": "104219840.00", "highlight": true },
+    { "Assuming": "LPB", "Value": "225393137.34", "highlight": true }
+  ]
+}
