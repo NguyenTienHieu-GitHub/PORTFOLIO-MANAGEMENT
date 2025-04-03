@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4c3940f4.css",
+    "main.js": "/static/js/main.c0046c66.js",
+    "static/js/453.8ab44547.chunk.js": "/static/js/453.8ab44547.chunk.js",
+    "static/media/tv-team.jpg": "/static/media/tv-team.fb3e9901d89d19feae98.jpg",
+    "index.html": "/index.html",
+    "main.4c3940f4.css.map": "/static/css/main.4c3940f4.css.map",
+    "main.c0046c66.js.map": "/static/js/main.c0046c66.js.map",
+    "453.8ab44547.chunk.js.map": "/static/js/453.8ab44547.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4c3940f4.css",
+    "static/js/main.c0046c66.js"
+  ]
+}
