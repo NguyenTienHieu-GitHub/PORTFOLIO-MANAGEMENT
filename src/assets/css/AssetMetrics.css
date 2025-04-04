@@ -42,3 +42,11 @@
 .asset-metrics-container tr:hover {
     background-color: #e0e0e0;
 }
+
+/* Thêm vào file CSS của bạn */
+.list-group-item.active {
+    background-color: #d4edda;
+    /* Màu xanh nhạt */
+    color: #155724;
+    /* Màu chữ phù hợp với màu xanh nhạt */
+}

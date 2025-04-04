@@ -1,59 +1,86 @@
-/* Custom CSS for the Login page */
-body {
-    background-color: #034612;
-    /* Background color as per the provided tone */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-}
-
+/* === Background tổng thể === */
 .login-container {
-    width: 100%;
+    background: linear-gradient(to right, #117a3b, #12d65a);
     display: flex;
+    align-items: center;
     justify-content: center;
+    height: 100vh;
+    padding: 20px;
 }
 
-.login-box {
-    background-color: #ffffff;
+/* === Card đăng nhập === */
+.login-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+    width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
+.login-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.3);
 }
 
-.form-group {
-    margin-bottom: 15px;
-}
-
-input {
-    padding: 10px;
-    font-size: 16px;
-}
-
-button {
-    font-size: 18px;
-    padding: 10px;
-    background-color: #034612;
-    /* Button color to match the theme */
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #026b12;
-    /* Darker shade on hover */
-}
-
-label {
+/* === Tiêu đề === */
+.login-title {
+    color: #034612;
     font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* === Thông báo lỗi === */
+.login-error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* === Nhóm input === */
+.login-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.login-group label {
+    font-weight: bold;
+    color: #034612;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #12d65a;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-input:focus {
+    border-color: #034612;
+    box-shadow: 0 0 5px rgba(3, 70, 18, 0.5);
+    outline: none;
+}
+
+/* === Nút đăng nhập === */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #034612;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.login-button:hover {
+    background-color: #12d65a;
+    transform: scale(1.05);
 }

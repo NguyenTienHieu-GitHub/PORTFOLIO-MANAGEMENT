@@ -20,7 +20,7 @@ const PortfolioTable = ({ title, data }) => {
     <div className="container">
       <div className="table-responsive">
         <table className="table table-bordered table-hover">
-          <thead className="table-primary">
+          <thead className="table-success">
             <tr>
               <th>{title}</th>
               <th></th>
@@ -89,7 +89,7 @@ const PortfolioTable2 = ({ title, data }) => {
     <div className="container">
       <div className="table-responsive">
         <table className="table table-bordered table-hover">
-          <thead className="table-primary">
+          <thead className="table-success">
             <tr>
               <th>{title}</th>
               <th></th>
@@ -205,8 +205,8 @@ const EfficientFrontier = () => {
           <div className="options-section">
             <h2>Risk Free: {AssetMetrics.risk_free}</h2>
 
-            <table className="table table-striped table-hover">
-              <thead className="table-primary">
+            <table className="table table-striped table-hover table-bordered">
+              <thead className="table-success">
                 <tr>
                   <th></th>
                   <th>FPT</th>
@@ -237,12 +237,12 @@ const EfficientFrontier = () => {
             </table>
           </div>
           <div className="card">
-            <div className="card-header">
+            <div className="card-header bg-success text-white">
               <h4>Choose Table</h4>
             </div>
             <div className="list-group list-group-flush">
               <button
-                className={`list-group-item list-group-item-action btn btn-outline-primary ${
+                className={`list-group-item list-group-item-action btn btn-outline-success ${
                   selectedOption === "Equally Weighted" ? "active" : ""
                 }`}
                 onClick={() => handleOptionClick("Equally Weighted")}
@@ -250,7 +250,7 @@ const EfficientFrontier = () => {
                 Equally Weighted
               </button>
               <button
-                className={`list-group-item list-group-item-action btn btn-outline-primary ${
+                className={`list-group-item list-group-item-action btn btn-outline-success ${
                   selectedOption === "Maximum Sharpe Ratio" ? "active" : ""
                 }`}
                 onClick={() => handleOptionClick("Maximum Sharpe Ratio")}
@@ -258,7 +258,7 @@ const EfficientFrontier = () => {
                 Maximum Sharpe Ratio
               </button>
               <button
-                className={`list-group-item list-group-item-action btn btn-outline-primary ${
+                className={`list-group-item list-group-item-action btn btn-outline-success ${
                   selectedOption === "Minimum Variance Portfolio"
                     ? "active"
                     : ""
@@ -268,7 +268,7 @@ const EfficientFrontier = () => {
                 Minimum Variance Portfolio
               </button>
               {/* <button
-                className={`list-group-item list-group-item-action btn btn-outline-primary ${
+                className={`list-group-item list-group-item-action btn btn-outline-success ${
                   selectedOption === "Random" ? "active" : ""
                 }`}
                 onClick={() => handleOptionClick("Random")}
@@ -278,12 +278,12 @@ const EfficientFrontier = () => {
             </div>
           </div>
           <div className="card mt-3">
-            <div className="card-header">
+            <div className="card-header bg-success text-white">
               <h4>Choose Chart</h4>
             </div>
             <div className="list-group list-group-flush">
               <button
-                className={`list-group-item list-group-item-action btn btn-outline-primary ${
+                className={`list-group-item list-group-item-action table-success ${
                   selectedOption === "Chart 1" ? "active" : ""
                 }`}
                 onClick={() => handleOptionClick("Chart 1")}
@@ -291,7 +291,7 @@ const EfficientFrontier = () => {
                 Efficient Frontier
               </button>
               <button
-                className={`list-group-item list-group-item-action btn btn-outline-primary ${
+                className={`list-group-item list-group-item-action btn btn-outline-success ${
                   selectedOption === "Chart 2" ? "active" : ""
                 }`}
                 onClick={() => handleOptionClick("Chart 2")}
@@ -299,7 +299,7 @@ const EfficientFrontier = () => {
                 Cal
               </button>
               <button
-                className={`list-group-item list-group-item-action btn btn-outline-primary ${
+                className={`list-group-item list-group-item-action btn ${
                   selectedOption === "Chart 3" ? "active" : ""
                 }`}
                 onClick={() => handleOptionClick("Chart 3")}

@@ -23,3 +23,21 @@ td {
     padding: 8px;
     text-align: center;
 }
+
+.table th,
+.table td {
+    text-align: center;
+    /* Căn giữa nội dung trong cột */
+    vertical-align: middle;
+    /* Căn giữa theo chiều dọc */
+}
+
+.table th {
+    width: 16.6%;
+    /* Chia đều các cột */
+}
+
+.table td {
+    width: 16.6%;
+    /* Chia đều các cột */
+}

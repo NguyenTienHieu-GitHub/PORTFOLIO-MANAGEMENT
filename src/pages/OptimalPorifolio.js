@@ -11,11 +11,11 @@ import DataCapital from "../assets/data/DataCapital.json";
 const OptionPortfolio = () => {
   return (
     <div>
-      <h2>Option Portfolio</h2>
+      <h2>Optimal Portfolio</h2>
       <table className="table table-striped table-hover table-bordered">
         {/* Tiêu đề bảng */}
-        <thead className="table-primary">
-          <tr class="bg-primary text-white">
+        <thead className="table-success">
+          <tr class="bg-success text-white">
             <th></th>
             <th>BCM</th>
             <th>FPT</th>
@@ -40,8 +40,8 @@ const OptionPortfolio = () => {
       </table>
       <div>
         <table className="table table-striped table-hover table-bordered">
-          <thead className="table-primary">
-            <tr class="bg-primary text-white">
+          <thead className="table-success">
+            <tr class="bg-success text-white">
               {Object.keys(Optimal[0]).map((key) => (
                 <th key={key}>{key}</th>
               ))}
@@ -58,53 +58,56 @@ const OptionPortfolio = () => {
           </tbody>
         </table>
       </div>
-      <div>
-        <table className="table table-striped table-hover table-bordered">
-          <thead className="table-primary">
-            <tr>
-              {Input.headers.map((header, index) => (
-                <th key={index}>{header}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {Input.rows.map((row, rowIndex) => (
-              <tr key={rowIndex}>
-                {Input.headers.map((header, colIndex) => (
-                  <td key={colIndex}>{row[header]}</td>
+      <div className="row">
+        <div className="col-md-6">
+          <table className="table table-striped table-hover table-bordered">
+            <thead className="table-success">
+              <tr>
+                {Input.headers.map((header, index) => (
+                  <th key={index}>{header}</th>
                 ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
-        <table className="table table-striped table-hover table-bordered">
-          {/* Render the table headers */}
-          <thead className="table-primary">
-            <tr>
-              {Output.headers.map((header, index) => (
-                <th key={index}>{header}</th>
+            </thead>
+            <tbody>
+              {Input.rows.map((row, rowIndex) => (
+                <tr key={rowIndex}>
+                  {Input.headers.map((header, colIndex) => (
+                    <td key={colIndex}>{row[header]}</td>
+                  ))}
+                </tr>
               ))}
-            </tr>
-          </thead>
-          {/* Render the table rows */}
-          <tbody>
-            {Output.rows.map((row, rowIndex) => (
-              <tr key={rowIndex}>
-                <td>{row.OUTPUT}</td>
-                <td>{row.value}</td>
+            </tbody>
+          </table>
+        </div>
+        <div className="col-md-6">
+          <table className="table table-striped table-hover table-bordered">
+            {/* Render the table headers */}
+            <thead className="table-success">
+              <tr>
+                {Output.headers.map((header, index) => (
+                  <th key={index}>{header}</th>
+                ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            {/* Render the table rows */}
+            <tbody>
+              {Output.rows.map((row, rowIndex) => (
+                <tr key={rowIndex}>
+                  <td>{row.OUTPUT}</td>
+                  <td>{row.value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
       <div>
         <table className="table table-striped table-hover table-bordered">
           {/* Render the table headers */}
-          <thead className="table-primary">
+          <thead className="table-success">
             <tr>
-              <th colSpan={2} className="bg-primary text-white">
-                Assuming
-              </th>
+              <th>Assuming</th>
+              <th></th>
             </tr>
           </thead>
           {/* Render the table rows */}
@@ -132,7 +135,7 @@ const OptionPortfolio = () => {
       </div>
       <table className="table table-striped table-hover table-bordered">
         {/* Render the table headers */}
-        <thead className="table-primary">
+        <thead className="table-success">
           <tr>
             {SolverWithFunc.headers.map((header, index) => (
               <th key={index}>{header}</th>

@@ -25,7 +25,7 @@ const DataTables = () => {
       <div key={`${group}-${tableData.table}`} style={{ marginBottom: "40px" }}>
         <h2>{tableData.table}</h2>
         <table className="table table-striped table-hover table-bordered">
-          <thead className="table-primary">
+          <thead className="table-success">
             <tr>
               <th>Year</th>
               {years.map((year) => (
@@ -49,7 +49,7 @@ const DataTables = () => {
                           ? value
                           : value.toFixed(3)
                         : value
-                      : "N/A"}
+                      : ""}
                   </td>
                 ))}
               </tr>
@@ -128,7 +128,7 @@ const DataTables = () => {
             style={{
               marginRight: "10px",
               padding: "10px 20px",
-              backgroundColor: selectedGroup === group ? "#007bff" : "#ccc",
+              backgroundColor: selectedGroup === group ? "#034612" : "#ccc",
               color: selectedGroup === group ? "#fff" : "#000",
               border: "none",
               borderRadius: "5px",
@@ -141,8 +141,18 @@ const DataTables = () => {
       </div>
       {selectedGroup ? (
         <>
-          {renderGroup(selectedGroup, Stock[selectedGroup])}
-          {renderCharts(selectedGroup)}
+          <div className="row">
+            <div className="col-md-12">
+              <div className="row">
+                <div className="col-md-6 mb-4">
+                  {renderGroup(selectedGroup, Stock[selectedGroup])}
+                </div>
+                <div className="col-md-6 mb-4">
+                  {renderCharts(selectedGroup)}
+                </div>
+              </div>
+            </div>
+          </div>
         </>
       ) : (
         <p>Please select a group to view the tables and charts.</p>

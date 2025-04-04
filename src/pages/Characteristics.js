@@ -11,11 +11,11 @@ const Characteristics = () => {
   return (
     <div>
       <h2>Characteristics</h2>
-      <div className="container">
+      <div className="container justify-center mx-auto">
         <table className="table table-striped table-hover table-bordered">
           {/* Tiêu đề bảng */}
-          <thead className="table-primary">
-            <th class="bg-primary text-white" colSpan={5}>
+          <thead className="table-success">
+            <th class="bg-success text-white" colSpan={5}>
               Return
             </th>
             <tr>
@@ -41,8 +41,8 @@ const Characteristics = () => {
         </table>
         <table className="table table-striped table-hover table-bordered">
           {/* Tiêu đề bảng */}
-          <thead className="table-primary">
-            <th class="bg-primary text-white" colSpan={5}>
+          <thead className="table-success">
+            <th class="bg-success text-white" colSpan={5}>
               (Ri-mean)
             </th>
             <tr>
@@ -68,9 +68,9 @@ const Characteristics = () => {
         </table>
         <table className="table table-striped table-hover table-bordered">
           {/* Tiêu đề bảng */}
-          <thead className="table-primary">
+          <thead className="table-success">
             <tr>
-              <th class="bg-primary text-white" colSpan={5}>
+              <th class="bg-success text-white" colSpan={5}>
                 (Ri-mean)^2
               </th>
             </tr>
@@ -99,8 +99,8 @@ const Characteristics = () => {
 
       <div>
         <table className="table table-striped table-hover table-bordered">
-          <thead className="table-primary">
-            <tr className="bg-primary text-white">
+          <thead className="table-success">
+            <tr className="bg-success text-white">
               {Object.keys(MeanVarSD[0]).map((header, index) => (
                 <th key={index}>{header}</th>
               ))}
@@ -118,8 +118,8 @@ const Characteristics = () => {
         </table>
         <table className="table table-striped table-hover table-bordered">
           {/* Tiêu đề bảng */}
-          <thead className="table-primary">
-            <tr class="bg-primary text-white">
+          <thead className="table-success">
+            <tr class="bg-success text-white">
               <th>Cov</th>
               <th>BCM</th>
               <th>FPT</th>
@@ -144,8 +144,8 @@ const Characteristics = () => {
         </table>
         <table className="table table-striped table-hover table-bordered">
           {/* Tiêu đề bảng */}
-          <thead className="table-primary">
-            <tr class="bg-primary text-white">
+          <thead className="table-success">
+            <tr class="bg-success text-white">
               <th>Cor.</th>
               <th>BCM</th>
               <th>FPT</th>

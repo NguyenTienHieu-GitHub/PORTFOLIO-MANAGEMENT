@@ -1,58 +1,65 @@
-.choose-options-container {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Cải tiến bố cục chung */
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-.choose-options-container h2 {
-    font-size: 24px;
-    color: #1e90ff;
+/* Sidebar cho các lựa chọn */
+.card {
     margin-bottom: 20px;
 }
 
-.options-wrapper {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+.card-header {
+    background-color: #034612;
+    /* Màu nền sidebar */
+    color: white;
+    text-align: center;
 }
 
-.select-section {
-    flex: 1;
+.card-body {
+    padding: 15px;
 }
 
-.select-section h3 {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 10px;
+/* Select option style */
+.form-select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
 }
 
-.button-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+/* Cải tiến bảng */
+.table-responsive {
+    margin-top: 20px;
 }
 
-.option-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #333;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
+.table-primary {
+    background-color: #034612;
+    color: white;
 }
 
-.option-button:hover {
-    background-color: #e0e0e0;
+.table th {
+    font-weight: bold;
 }
 
-.option-button.selected {
-    background-color: #1e90ff;
-    color: #fff;
-    border-color: #1e90ff;
+.table-striped tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #e0f7fa;
+}
+
+.table-bordered td,
+.table-bordered th {
+    border: 1px solid #ddd;
+}
+
+/* Tối ưu giao diện trên các thiết bị nhỏ */
+@media (max-width: 768px) {
+    .table-responsive {
+        padding: 10px;
+    }
 }

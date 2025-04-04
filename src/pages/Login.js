@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../components/UseContext"; // Import hook từ UserContext
 import users from "../assets/data/user.json"; // Import dữ liệu người dùng từ file JSON
+import "../assets/css/Login.css"; // Import file CSS mới
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -26,8 +27,8 @@ const Login = () => {
     );
     if (user) {
       // Lưu thông tin vào localStorage và context
-      localStorage.setItem("user", JSON.stringify(user)); // Lưu thông tin người dùng vào localStorage
-      setUser(user); // Cập nhật context với thông tin người dùng
+      localStorage.setItem("user", JSON.stringify(user));
+      setUser(user);
       navigate("/home"); // Điều hướng đến trang Home
     } else {
       setError("Email hoặc mật khẩu không đúng");
@@ -36,33 +37,33 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <div className="login-box">
-        <h2 className="text-center">Login</h2>
-        {error && <p className="text-danger">{error}</p>}
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
+      <div className="login-card">
+        <h2 className="login-title">Login</h2>
+        {error && <p className="login-error">{error}</p>}
+        <form onSubmit={handleSubmit} className="login-form">
+          <div className="login-group">
             <label htmlFor="email">Email</label>
             <input
               type="email"
               id="email"
-              className="form-control"
+              className="login-input"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
-          <div className="form-group">
+          <div className="login-group">
             <label htmlFor="password">Password</label>
             <input
               type="password"
               id="password"
-              className="form-control"
+              className="login-input"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
-          <button type="submit" className="btn btn-primary btn-block">
+          <button type="submit" className="login-button">
             Login
           </button>
         </form>
