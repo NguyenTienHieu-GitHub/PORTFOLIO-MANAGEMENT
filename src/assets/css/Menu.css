@@ -1,0 +1,76 @@
+/* Custom CSS for the Navbar */
+.custom-navbar {
+    background-color: #034612 !important;
+    /* Set the background color */
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    /* Set text color to white */
+    padding-left: 15px;
+    /* Adjust padding if necessary to ensure consistency */
+    padding-right: 15px;
+    /* Adjust padding if necessary to ensure consistency */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #d1d1d1 !important;
+    /* Optional: Set hover color */
+}
+
+.navbar-brand .logo {
+    width: 120px;
+    /* Set a fixed width for the logo */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+/* Ensure no spacing or layout changes when active */
+.navbar-nav .nav-item.active .nav-link {
+    color: #f0f0f0 !important;
+    /* Set active link color to a brighter shade */
+    font-weight: normal !important;
+    /* Set font weight to normal to avoid layout shifts */
+    border-bottom: 2px solid #f0f0f0;
+    /* Optional: Add a bottom border to highlight active link */
+}
+
+.navbar-nav .nav-item {
+    margin-left: 10px;
+    /* Optional: Adjust item spacing */
+    margin-right: 10px;
+    /* Optional: Adjust item spacing */
+}
+
+
+
+
+/* Đảm bảo dropdown-menu hiển thị khi hover */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    /* Hiển thị dropdown khi hover vào menu */
+}
+
+/* Đảm bảo dropdown menu không bị đẩy khỏi vị trí */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: auto;
+    z-index: 1000;
+    display: none;
+    /* Mặc định ẩn */
+}
+
+/* Đảm bảo dropdown-item có màu chữ đen */
+.dropdown-item {
+    color: #333 !important;
+    /* Màu chữ cho dropdown item */
+}
+
+/* Màu chữ khi hover vào dropdown item */
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #000 !important;
+    /* Màu chữ khi hover */
+}

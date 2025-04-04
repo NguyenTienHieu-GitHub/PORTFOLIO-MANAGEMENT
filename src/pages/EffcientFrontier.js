@@ -267,14 +267,14 @@ const EfficientFrontier = () => {
               >
                 Minimum Variance Portfolio
               </button>
-              <button
+              {/* <button
                 className={`list-group-item list-group-item-action btn btn-outline-primary ${
                   selectedOption === "Random" ? "active" : ""
                 }`}
                 onClick={() => handleOptionClick("Random")}
               >
                 Random
-              </button>
+              </button> */}
             </div>
           </div>
           <div className="card mt-3">
