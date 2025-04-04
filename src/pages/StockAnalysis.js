@@ -128,7 +128,7 @@ const DataTables = () => {
             style={{
               marginRight: "10px",
               padding: "10px 20px",
-              backgroundColor: selectedGroup === group ? "#034612" : "#ccc",
+              backgroundColor: selectedGroup === group ? "#009320" : "#ccc",
               color: selectedGroup === group ? "#fff" : "#000",
               border: "none",
               borderRadius: "5px",
