@@ -312,8 +312,8 @@ const EfficientFrontier = () => {
 
         {/* Nội dung bên phải */}
         <div className="col-md-8">
-          {renderContent()}
-          {renderChart()}
+          <div>{renderContent()}</div>
+          <div className="m-50">{renderChart()}</div>
         </div>
       </div>
     </div>
