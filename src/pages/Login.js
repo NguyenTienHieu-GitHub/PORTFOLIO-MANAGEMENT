@@ -26,10 +26,17 @@ const Login = () => {
       (user) => user.email === email && user.password === password
     );
     if (user) {
-      // Lưu thông tin vào localStorage và context
-      localStorage.setItem("user", JSON.stringify(user));
-      setUser(user);
-      navigate("/home"); // Điều hướng đến trang Home
+      // Tạo một bản sao của đối tượng user mà không chứa mật khẩu
+      const { password, ...userWithoutPassword } = user;
+
+      // Lưu thông tin người dùng vào localStorage mà không có mật khẩu
+      localStorage.setItem("user", JSON.stringify(userWithoutPassword));
+
+      // Cập nhật context
+      setUser(userWithoutPassword);
+
+      // Điều hướng đến trang Home
+      navigate("/home");
     } else {
       setError("Email hoặc mật khẩu không đúng");
     }

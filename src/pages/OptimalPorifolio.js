@@ -10,7 +10,7 @@ import SolverWithFunc from "../assets/data/SolverWithFunc.json";
 import DataCapital from "../assets/data/DataCapital.json";
 const OptionPortfolio = () => {
   return (
-    <div>
+    <div className="">
       <h2>Optimal Portfolio</h2>
       <table className="table table-striped table-hover table-bordered">
         {/* Tiêu đề bảng */}

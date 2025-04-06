@@ -97,7 +97,7 @@ const Characteristics = () => {
         </table>
       </div>
 
-      <div>
+      <div className="">
         <table className="table table-striped table-hover table-bordered">
           <thead className="table-success">
             <tr className="bg-success text-white">

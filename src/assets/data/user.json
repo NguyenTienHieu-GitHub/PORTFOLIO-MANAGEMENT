@@ -5,6 +5,13 @@
     "name": "Nguyễn Văn Minh",
     "age": 38,
     "occupation": "Quản lý cấp trung tại một tập đoàn đa quốc gia",
-    "maritalStatus": "Đã kết hôn, có 2 con"
+    "maritalStatus": "Đã kết hôn, có 2 con",
+    "annualIncomeAfterTax": "Khoảng 1 tỷ đồng",
+    "investmentGoals": [
+      "Tích lũy tài sản cho hưu trí (trong khoảng 20-25 năm tới)",
+      "Đảm bảo nguồn vốn để chi trả học phí đại học cho các con"
+    ],
+    "riskTolerance": "Tiến hành khảo sát theo bảng",
+    "investmentExperience": ""
   }
 ]

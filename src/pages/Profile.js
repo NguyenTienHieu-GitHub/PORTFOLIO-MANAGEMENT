@@ -22,6 +22,9 @@ const Profile = () => {
             <strong>Name:</strong> {user.name}
           </p>
           <p>
+            <strong>Email:</strong> {user.email}
+          </p>
+          <p>
             <strong>Age:</strong> {user.age}
           </p>
           <p>
@@ -29,6 +32,29 @@ const Profile = () => {
           </p>
           <p>
             <strong>Marital Status:</strong> {user.maritalStatus}
+          </p>
+          <p>
+            <strong>Annual Income After Tax:</strong>{" "}
+            {user.annualIncomeAfterTax}
+          </p>
+          <p>
+            <strong>Investment Goals:</strong>
+            <ul>
+              {user.investmentGoals && user.investmentGoals.length > 0 ? (
+                user.investmentGoals.map((goal, index) => (
+                  <li key={index}>{goal}</li>
+                ))
+              ) : (
+                <li>No investment goals set.</li>
+              )}
+            </ul>
+          </p>
+          <p>
+            <strong>Risk Tolerance:</strong> {user.riskTolerance}
+          </p>
+          <p>
+            <strong>Investment Experience:</strong>{" "}
+            {user.investmentExperience || ""}
           </p>
         </div>
       </div>

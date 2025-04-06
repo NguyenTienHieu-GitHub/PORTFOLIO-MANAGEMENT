@@ -76,41 +76,63 @@ const DataTables = () => {
 
   // Function to render charts based on the selected group
   const renderCharts = (group) => {
+    const chartStyle = { marginBottom: "100px", marginTop: "20px" };
+
     switch (group) {
       case "KSV":
         return (
-          <div>
-            <KSVROEChart />
-            <KSVEPSChart />
-          </div>
+          <>
+            <div style={chartStyle}>
+              <KSVROEChart />
+            </div>
+            <div>
+              <KSVEPSChart />
+            </div>
+          </>
         );
       case "BCM":
         return (
-          <div>
-            <BCMROEChart />
-            <BCMEPSChart />
-          </div>
+          <>
+            <div style={chartStyle}>
+              <BCMROEChart />
+            </div>
+            <div>
+              <BCMEPSChart />
+            </div>
+          </>
         );
       case "FPT":
         return (
-          <div>
-            <FPTROEChart />
-            <FPTEPSChart />
-          </div>
+          <>
+            <div style={chartStyle}>
+              <FPTROEChart />
+            </div>
+            <div>
+              <FPTEPSChart />
+            </div>
+          </>
         );
       case "LPB":
         return (
-          <div>
-            <LPBROEChart />
-            <LPBEPSChart />
-          </div>
+          <>
+            <div style={chartStyle}>
+              <LPBROEChart />
+            </div>
+            <div>
+              <LPBEPSChart />
+            </div>
+          </>
         );
       case "VGC":
         return (
-          <div>
-            <VGCROEChart />
-            <VGCEPSChart />
-          </div>
+          <>
+            <div style={chartStyle}>
+              <VGCROEChart />
+            </div>
+            <div>
+              <VGCEPSChart />
+            </div>
+          </>
         );
       default:
         return null;
@@ -119,7 +141,7 @@ const DataTables = () => {
 
   return (
     <div style={{ padding: "20px" }}>
-      <h1>Financial Data Tables</h1>
+      <h1>Data Tables</h1>
       <div style={{ marginBottom: "20px" }}>
         {Object.keys(Stock).map((group) => (
           <button
@@ -139,24 +161,27 @@ const DataTables = () => {
           </button>
         ))}
       </div>
-      {selectedGroup ? (
-        <>
-          <div className="row">
-            <div className="col-md-12">
-              <div className="row">
-                <div className="col-md-6 mb-4">
-                  {renderGroup(selectedGroup, Stock[selectedGroup])}
-                </div>
-                <div className="col-md-6 mb-4">
-                  {renderCharts(selectedGroup)}
+      <div>
+        {selectedGroup ? (
+          <>
+            <div className="row">
+              <div className="col-md-12">
+                <div className="row">
+                  <div className="col-md-6 mb-4">
+                    {renderGroup(selectedGroup, Stock[selectedGroup])}
+                  </div>
+                  <div className="col-md-6">
+                    <h2>Charts</h2>
+                    <div>{renderCharts(selectedGroup)}</div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </>
-      ) : (
-        <p>Please select a group to view the tables and charts.</p>
-      )}
+          </>
+        ) : (
+          <p>Please select a group to view the tables and charts.</p>
+        )}
+      </div>
     </div>
   );
 };
