@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate, Navigate } from "react-router-dom";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -35,6 +35,7 @@ function App() {
         <Menu />
         <div className="content">
           <Routes>
+            <Route path="/" element={<Navigate to="/home" replace />} />
             <Route path="/home" element={<Home />} />{" "}
             {/* Trang Home không yêu cầu đăng nhập */}
             <Route path="/login" element={<Login />} />{" "}
@@ -67,7 +68,6 @@ function App() {
             />
           </Routes>
         </div>
-        {/* Footer */}
         <Footer />
       </div>
     </UserProvider>

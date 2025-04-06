@@ -21,7 +21,7 @@ const AboutUsSection = () => {
       </div>
       <div className="right-section">
         <div className="top-right">
-          <h3>About</h3>
+          <h3>About Us</h3>
           <h1>History, Vision, and Mission of the Company</h1>
         </div>
         <div className="bottom-right">
