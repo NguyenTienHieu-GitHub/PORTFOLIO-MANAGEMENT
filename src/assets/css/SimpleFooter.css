@@ -1,0 +1,54 @@
+/* BootstrapSimpleFooter.css */
+.bg-light {
+    background-color: #f8f9fa !important;
+    padding: 40px;
+}
+
+.py-4 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.mt-5 {
+    margin-top: 3rem !important;
+}
+
+.text-start {
+    text-align: left !important;
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+.nav-link.p-0 {
+    padding: 0 !important;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+.nav-link.text-muted:hover {
+    color: #007bff !important;
+}
+
+.footer-title {
+    color: #198754;
+    /* Green heading color */
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Adjust spacing between footer sections */
+.row>div {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Optional: Add some right padding to the logo column for spacing */
+.col-md-6:first-child {
+    padding-right: 20px;
+}

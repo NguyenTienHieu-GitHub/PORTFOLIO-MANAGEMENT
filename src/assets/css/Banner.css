@@ -1,0 +1,132 @@
+.carousel {
+    background-color: #2E5246;
+    width: 100%;
+    height: 550px;
+    /* Hoặc chiều cao cố định bạn muốn */
+}
+
+.carousel-inner {
+    display: flex;
+    /* Để các slide nằm ngang */
+}
+
+.carousel-item {
+    display: flex !important;
+    /* Quan trọng để các phần tử con nằm ngang */
+    width: 100%;
+    height: auto;
+}
+
+.banner-slide {
+    display: flex;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    /* Cần thiết để bo tròn không bị tràn */
+}
+
+.banner-left {
+
+    /* Màu xanh lá cây đậm */
+    color: white;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0.4;
+    /* Tỷ lệ chiều rộng cho phần bên trái */
+}
+
+.banner-content {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.banner-content h2 {
+    font-size: 2.5vw;
+    /* Sử dụng vw cho kích thước tương đối */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.banner-content h2.emphasized {
+    color: #a8dadc;
+    /* Màu xanh nhạt hơn cho phần "trường đầu tư" */
+}
+
+.banner-right {
+    flex: 0.6;
+    /* Tỷ lệ chiều rộng cho phần bên phải */
+    position: relative;
+    overflow: hidden;
+    /* Cắt bỏ phần hình ảnh bị tràn */
+}
+
+.banner-image {
+    display: block;
+    height: 550px;
+    object-fit: cover;
+    /* Đảm bảo hình ảnh lấp đầy container */
+    /* Giá trị bo tròn, bạn có thể điều chỉnh */
+}
+
+/* Loại bỏ overlay cong nếu bạn muốn bo tròn đơn giản */
+.banner-left-bottom-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background-image: linear-gradient(to bottom left, transparent 50%, #2E5246 50%);
+    z-index: 1;
+    pointer-events: none;
+    /* Để các tương tác chuột vẫn có thể xảy ra trên hình ảnh bên dưới */
+}
+
+.banner-left-top-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    /* Giữ nguyên chiều rộng nếu bạn muốn phủ nửa bên trái */
+    height: 100%;
+    background-image: linear-gradient(to top left, transparent 50%, #2E5246 50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Điều chỉnh responsive (tùy chọn) */
+@media (max-width: 768px) {
+    .banner-slide {
+        flex-direction: column;
+    }
+
+    .banner-left {
+        flex: 1;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .banner-content {
+        text-align: center;
+    }
+
+    .banner-content h2 {
+        font-size: 5vw;
+    }
+
+    .banner-right {
+        flex: 1;
+    }
+
+    .banner-image {
+        border-bottom-left-radius: 30px;
+        border-top-left-radius: 30px;
+        /* Điều chỉnh bo tròn cho màn hình nhỏ hơn */
+    }
+
+    /* Ẩn overlay cong trên màn hình nhỏ nếu bạn đã loại bỏ nó */
+    /* .banner-right-overlay {
+      display: none;
+    } */
+}

@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import Logo from "../assets/images/Logoweb.png";
-
 import { useUser } from "../components/UseContext";
 import "../assets/css/Menu.css"; // Import your CSS file for custom styles
 
@@ -57,51 +55,81 @@ const Menu = () => {
               HOME
             </Link>
           </li>
-          <li
-            className={`nav-item ${isActive("/data-montly") ? "active" : ""}`}
-          >
-            <Link className="nav-link" to="/data-montly">
-              DATA MONTLY
+          <li className={`nav-item ${isActive("/about-us") ? "active" : ""}`}>
+            <Link className="nav-link" to="/about-us">
+              ABOUT US
             </Link>
           </li>
-          <li
-            className={`nav-item ${
-              isActive("/characteristics") ? "active" : ""
-            }`}
-          >
-            <Link className="nav-link" to="/characteristics">
-              CHARACTERISTICS
+          <li className={`nav-item ${isActive("/contact") ? "active" : ""}`}>
+            <Link className="nav-link" to="/contact">
+              CONTACT
             </Link>
           </li>
-          <li
-            className={`nav-item ${
-              isActive("/option-porifolio") ? "active" : ""
-            }`}
-          >
-            <Link className="nav-link" to="/option-porifolio">
-              OPTIMAL PORTFOLIO
-            </Link>
-          </li>
-          <li
-            className={`nav-item ${
-              isActive("/effcient-frontierportfolio") ? "active" : ""
-            }`}
-          >
-            <Link className="nav-link" to="/effcient-frontierportfolio">
-              EFFICIENT FRONTIER & CAL
-            </Link>
-          </li>
-          <li
-            className={`nav-item ${
-              isActive("/stock-analysis") ? "active" : ""
-            }`}
-          >
-            <Link className="nav-link" to="/stock-analysis">
-              STOCK ANALYSIS
-            </Link>
-          </li>
-          <li className="nav-item dropdown ms-3">
-            {user && (
+
+          {/* Chỉ hiển thị Client & Portfolio nếu người dùng đã đăng nhập */}
+          {user && (
+            <li className="nav-item dropdown ms-3">
+              <Link
+                className="nav-link dropdown-toggle"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                PORTFOLIO
+              </Link>
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li className="dropdown-item">
+                  <Link className="dropdown-item" to="/data-montly">
+                    DATA MONTHLY
+                  </Link>
+                </li>
+                <li className="dropdown-item">
+                  <Link className="dropdown-item" to="/characteristics">
+                    CHARACTERISTICS
+                  </Link>
+                </li>
+                <li className="dropdown-item">
+                  <Link className="dropdown-item" to="/option-porifolio">
+                    OPTIMAL PORTFOLIO
+                  </Link>
+                </li>
+                <li className="dropdown-item">
+                  <Link
+                    className="dropdown-item"
+                    to="/effcient-frontierportfolio"
+                  >
+                    EFFICIENT FRONTIER & CAL
+                  </Link>
+                </li>
+                <li className="dropdown-item">
+                  <Link className="dropdown-item" to="/stock-analysis">
+                    STOCK ANALYSIS
+                  </Link>
+                </li>
+              </ul>
+            </li>
+          )}
+
+          {/* Hiển thị Login/Sign Up nếu người dùng chưa đăng nhập */}
+          {!user && (
+            <>
+              <li className={`nav-item ${isActive("/login") ? "active" : ""}`}>
+                <Link className="nav-link" to="/login">
+                  LOGIN
+                </Link>
+              </li>
+              {/* <li className={`nav-item ${isActive("/signup") ? "active" : ""}`}>
+                <Link className="nav-link" to="/signup">
+                  SIGN UP
+                </Link>
+              </li> */}
+            </>
+          )}
+
+          {/* Hiển thị thông tin người dùng và nút Logout nếu đã đăng nhập */}
+          {user && (
+            <li className="nav-item dropdown ms-3">
               <div className="dropdown">
                 <p
                   className="nav-link dropdown-toggle"
@@ -125,8 +153,8 @@ const Menu = () => {
                   </li>
                 </ul>
               </div>
-            )}
-          </li>
+            </li>
+          )}
         </ul>
       </div>
     </nav>

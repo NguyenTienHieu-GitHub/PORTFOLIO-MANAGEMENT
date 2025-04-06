@@ -2,7 +2,10 @@ import React, { useEffect } from "react";
 import "./App.css";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import Menu from "./components/Menu";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import AboutUs from "./pages/AboutUs"; // Import the AboutUs component
+import Contact from "./pages/Contact"; // Import the Contact component
 import DataMontly from "./pages/DataMontly";
 import Characteristics from "./pages/Characteristics";
 import OptimalPortfolio from "./pages/OptimalPorifolio";
@@ -11,22 +14,17 @@ import StockAnalysis from "./pages/StockAnalysis";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import { UserProvider } from "./components/UseContext";
+import PrivateRoute from "./Router/PrivateRoute"; // Import component PrivateRoute
 
 function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Kiểm tra nếu người dùng đã đăng nhập và có thông tin trong localStorage
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
-      // Nếu có, điều hướng tới trang Home và không làm gì thêm
+      // Nếu người dùng đã đăng nhập, điều hướng tới trang Home nếu họ đang ở trang Login
       if (window.location.pathname === "/login") {
         navigate("/home");
-      }
-    } else {
-      // Nếu không, điều hướng tới trang Login
-      if (window.location.pathname !== "/login") {
-        navigate("/login");
       }
     }
   }, [navigate]);
@@ -37,20 +35,40 @@ function App() {
         <Menu />
         <div className="content">
           <Routes>
-            <Route path="/" element={<Login />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/data-montly" element={<DataMontly />} />
-            <Route path="/characteristics" element={<Characteristics />} />
-            <Route path="/option-porifolio" element={<OptimalPortfolio />} />
+            <Route path="/home" element={<Home />} />{" "}
+            {/* Trang Home không yêu cầu đăng nhập */}
+            <Route path="/login" element={<Login />} />{" "}
+            {/* Trang đăng nhập không yêu cầu đăng nhập */}
+            <Route path="/about-us" element={<AboutUs />} />{" "}
+            <Route path="/contact" element={<Contact />} />{" "}
+            <Route
+              path="/profile"
+              element={<PrivateRoute element={<Profile />} />}
+            />
+            <Route
+              path="/data-montly"
+              element={<PrivateRoute element={<DataMontly />} />}
+            />
+            <Route
+              path="/characteristics"
+              element={<PrivateRoute element={<Characteristics />} />}
+            />
+            <Route
+              path="/option-porifolio"
+              element={<PrivateRoute element={<OptimalPortfolio />} />}
+            />
             <Route
               path="/effcient-frontierportfolio"
-              element={<EfficientFrontier />}
+              element={<PrivateRoute element={<EfficientFrontier />} />}
             />
-            <Route path="/stock-analysis" element={<StockAnalysis />} />
+            <Route
+              path="/stock-analysis"
+              element={<PrivateRoute element={<StockAnalysis />} />}
+            />
           </Routes>
         </div>
+        {/* Footer */}
+        <Footer />
       </div>
     </UserProvider>
   );
