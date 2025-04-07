@@ -1,5 +1,6 @@
 import React from "react";
 import "../assets/css/About.css"; // Import CSS file
+import ImgAbout from "../assets/images/aboutus.jpg"; // Import image
 
 const AboutUsSection = () => {
   return (
@@ -7,9 +8,9 @@ const AboutUsSection = () => {
       <div className="left-section">
         <div className="image-wrapper">
           <img
-            src="https://www.dragoncapital.com.vn/vi/sfsites/c/cms/delivery/media/MC3HEOO3N3BNFPNKDMIVC4VV2DPI?version=4.3&channelId=0apJ2000000fxi1"
+            src={ImgAbout} // Replace with the actual path to your image
             // Replace with the actual path to your image
-            alt="Man in Suit"
+            alt=""
             className="real-image"
           />
           {/* <img
